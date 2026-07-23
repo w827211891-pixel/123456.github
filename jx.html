@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>123456789</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: white;
+        }
+        
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 30px 0 20px;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+        
+        .header p {
+            color: #888;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        
+        .input-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        
+        .input-box label {
+            display: block;
+            color: #aaa;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+        
+        .input-box input {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            color: white;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .input-box input:focus {
+            border-color: #667eea;
+        }
+        
+        .input-box input::placeholder {
+            color: #555;
+        }
+        
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        
+        .quick-links button {
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: white;
+        }
+        
+        .quick-links button:active {
+            transform: scale(0.95);
+        }
+        
+        .btn-iqiyi {
+            background: linear-gradient(135deg, #00b712, #5aff15);
+        }
+        
+        .btn-tencent {
+            background: linear-gradient(135deg, #0066ff, #00ccff);
+        }
+        
+        .btn-youku {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+        }
+        
+        .btn-parse {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 8px;
+        }
+        
+        .btn-parse:active {
+            transform: scale(0.97);
+        }
+        
+        .parse-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 16px 0;
+        }
+        
+        .parse-options button {
+            padding: 12px;
+            border: 2px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            background: rgba(255,255,255,0.03);
+            color: #ccc;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .parse-options button:active {
+            transform: scale(0.95);
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .parse-options button.active {
+            border-color: #667eea;
+            background: rgba(102,126,234,0.15);
+            color: white;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #444;
+            font-size: 12px;
+            padding: 30px 0 10px;
+            line-height: 1.8;
+        }
+        
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 10px;
+            margin-left: 4px;
+        }
+        
+        .badge-online {
+            background: rgba(0,255,0,0.2);
+            color: #4caf50;
+        }
+        
+        .badge-offline {
+            background: rgba(255,0,0,0.2);
+            color: #ff6b6b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <h1>🎬 视频解析</h1>
+            <p>点击平台按钮直接跳转官网</p>
+        </div>
+
+        <!-- 快捷平台按钮 - 新窗口打开 -->
+        <div class="quick-links">
+            <button class="btn-iqiyi" onclick="window.open('https://www.iqiyi.com', '_blank')">
+                🎯 爱奇艺
+            </button>
+            <button class="btn-tencent" onclick="window.open('https://v.qq.com', '_blank')">
+                🎬 腾讯
+            </button>
+            <button class="btn-youku" onclick="window.open('https://www.youku.com', '_blank')">
+                📺 优酷
+            </button>
+        </div>
+
+        <!-- 输入框 -->
+        <div class="input-box">
+            <label>📌 粘贴视频链接进行解析</label>
+            <input type="text" id="videoUrl" placeholder="https://www.iqiyi.com/v_xxx.html">
+            
+            <!-- 解析接口选择 -->
+            <div class="parse-options">
+                <button class="active" data-api="ai" onclick="selectAPI(this)">
+                    🤖 AI解析
+                    <span class="badge badge-online">●</span>
+                </button>
+                <button data-api="xiami" onclick="selectAPI(this)">
+                    🦐 虾米解析
+                    <span class="badge badge-online">●</span>
+                </button>
+                <button data-api="qige" onclick="selectAPI(this)">
+                    🎯 七哥解析
+                    <span class="badge badge-online">●</span>
+                </button>
+            </div>
+            
+            <button class="btn-parse" onclick="parseVideo()">🚀 解析并播放</button>
+        </div>
+
+        <!-- 使用说明 -->
+        <div style="background:rgba(255,255,255,0.03); border-radius:12px; padding:16px; border:1px solid rgba(255,255,255,0.05);">
+            <p style="color:#888; font-size:13px; margin-bottom:8px;">💡 使用方式：</p>
+            <ul style="color:#666; font-size:12px; line-height:2; padding-left:20px;">
+                <li>点击平台按钮 → 新窗口打开官网</li>
+                <li>粘贴链接 → 选择接口 → 点击解析播放</li>
+                <li>所有解析仅供学习使用</li>
+            </ul>
+        </div>
+
+        <!-- 底部 -->
+        <div class="footer">
+            ⚠️ 仅供学习研究 · 视频版权归原平台所有<br>
+            <span style="color:#333;">接口来源于网络，随时可能失效</span>
+        </div>
+    </div>
+
+    <script>
+        // ===== 配置区 =====
+        const APIS = {
+            ai: 'https://super.playr.top/?url=',
+            xiami: 'https://jx.xmflv.com/?url=',
+            qige: 'https://jx.202617.xyz/tv.php?url='
+        };
+        
+        let currentAPI = 'ai';
+
+        // ===== 选择解析接口 =====
+        function selectAPI(btn) {
+            document.querySelectorAll('.parse-options button').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentAPI = btn.dataset.api;
+        }
+
+        // ===== 解析并播放 =====
+        function parseVideo() {
+            const url = document.getElementById('videoUrl').value.trim();
+            
+            if (!url) {
+                alert('⚠️ 请粘贴视频链接！');
+                return;
+            }
+            
+            if (!url.startsWith('http://') && !url.startsWith('https://')) {
+                alert('⚠️ 请输入有效链接（以 http:// 或 https:// 开头）');
+                return;
+            }
+            
+            const apiUrl = APIS[currentAPI];
+            const finalUrl = apiUrl + encodeURIComponent(url);
+            window.open(finalUrl, '_blank');
+        }
+
+        // ===== 回车键支持 =====
+        document.getElementById('videoUrl').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                parseVideo();
+            }
+        });
+
+        console.log('✅ 视频解析已加载');
+        console.log('📌 当前接口:', currentAPI);
+        console.log('💡 点击平台按钮新窗口打开官网');
+    </script>
+</body>
+</html>
