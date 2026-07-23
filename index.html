@@ -217,7 +217,7 @@
             <label>📌 粘贴视频链接进行播放</label>
             <input type="text" id="videoUrl" placeholder="https://www.iqiyi.com/v_xxx.html">
             
-            <!-- 解析接口选择 -->
+            <!-- 接口选择 -->
             <div class="parse-options">
                 <button class="active" data-api="ai" onclick="selectAPI(this)">
                     🤖 AI
@@ -241,8 +241,8 @@
             <p style="color:#888; font-size:13px; margin-bottom:8px;">💡 使用方式：</p>
             <ul style="color:#666; font-size:12px; line-height:2; padding-left:20px;">
                 <li>点击平台按钮 → 新窗口打开官网</li>
-                <li>粘贴链接 → 选择接口 → 点击解析播放</li>
-                <li>所有解析仅供学习使用</li>
+                <li>粘贴链接 → 选择接口 → 点击播放</li>
+                <li>所有操作仅供学习使用</li>
             </ul>
         </div>
 
@@ -263,14 +263,14 @@
         
         let currentAPI = 'ai';
 
-        // ===== 选择解析接口 =====
+        // ===== 选择接口 =====
         function selectAPI(btn) {
             document.querySelectorAll('.parse-options button').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             currentAPI = btn.dataset.api;
         }
 
-        // ===== 解析并播放 =====
+        // ===== 播放 =====
         function parseVideo() {
             const url = document.getElementById('videoUrl').value.trim();
             
@@ -296,7 +296,7 @@
             }
         });
 
-        console.log('✅ 视频解析已加载');
+        console.log('✅ 视频已加载');
         console.log('📌 当前接口:', currentAPI);
         console.log('💡 点击平台按钮新窗口打开官网');
     </script>
