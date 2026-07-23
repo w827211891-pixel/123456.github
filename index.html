@@ -195,7 +195,7 @@
     <div class="container">
         <!-- 头部 -->
         <div class="header">
-            <h1>🎬 视频解析</h1>
+            <h1>🎬 视频播放器</h1>
             <p>点击平台按钮直接跳转官网</p>
         </div>
 
@@ -214,26 +214,26 @@
 
         <!-- 输入框 -->
         <div class="input-box">
-            <label>📌 粘贴视频链接进行解析</label>
+            <label>📌 粘贴视频链接进行播放</label>
             <input type="text" id="videoUrl" placeholder="https://www.iqiyi.com/v_xxx.html">
             
             <!-- 解析接口选择 -->
             <div class="parse-options">
                 <button class="active" data-api="ai" onclick="selectAPI(this)">
-                    🤖 AI解析
+                    🤖 AI
                     <span class="badge badge-online">●</span>
                 </button>
                 <button data-api="xiami" onclick="selectAPI(this)">
-                    🦐 虾米解析
+                    🦐 虾米
                     <span class="badge badge-online">●</span>
                 </button>
                 <button data-api="qige" onclick="selectAPI(this)">
-                    🎯 七哥解析
+                    🎯 七哥
                     <span class="badge badge-online">●</span>
                 </button>
             </div>
             
-            <button class="btn-parse" onclick="parseVideo()">🚀 解析并播放</button>
+            <button class="btn-parse" onclick="parseVideo()">🚀 播放</button>
         </div>
 
         <!-- 使用说明 -->
