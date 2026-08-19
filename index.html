@@ -219,8 +219,8 @@
             
             <!-- 接口选择 -->
             <div class="parse-options">
-                <button class="active" data-api="ai" onclick="selectAPI(this)">
-                     AI解析
+                <button class="active" data-api="youku" onclick="selectAPI(this)">
+                     优酷解析
                     <span class="badge badge-online">●</span>
                 </button>
                 <button data-api="jisu" onclick="selectAPI(this)">
@@ -256,7 +256,7 @@
     <script>
         // ===== 配置区 =====
         const APIS = {
-            ai: 'https://super.playr.top/?url=',
+            youku: 'https://video.isyour.love/player/getplayer?url',
             jisu: 'https://jx.2s0.cn/player/?url=',
             qige: 'https://jx.202617.xyz/tv.php?url='
         };
